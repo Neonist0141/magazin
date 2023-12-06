@@ -36,7 +36,7 @@ ul {
 li {
   padding: 5px 15px; 
   cursor: pointer;
-  background-color: #eee;
+  background-color: #0f4c75;
   border-radius: 100px;
 }
 </style>
