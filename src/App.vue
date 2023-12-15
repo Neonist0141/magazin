@@ -1,51 +1,66 @@
 <!-- src/App.vue -->
 
 <template>
-  <header>
-      <article>
-          <h1>Магазин рукодельных изделий</h1>
-      </article>
-      <Menu></Menu>
-  </header>
-  <div>БЛОК</div>
-  <div>БЛОК</div>
-  <Footer></Footer>
+  <Header />
+  <Katalog id="sectionKatalog"/>
+  <Galereya id="sectionGalereya"/>
+  <Kontakty id="sectionKontakty"/>
+  <Footer id="footer" />
 </template>
 
 <script>
-import Menu from './components/Menu.vue';
-import Footer from './components/Footer.vue'
+import Header from './components/Header.vue';
+import Footer from './components/Footer.vue';
+import Katalog from './components/section/Katalog.vue';
+import Galereya from './components/section/Galereya.vue';
+import Kontakty from './components/section/Kontakty.vue';
 
 export default {
   name: 'App',
   components: {
-    Menu,
+    Header,
+    Katalog,
+    Galereya,
+    Kontakty,
     Footer
   }
 };
 </script>
 
 <style>
-  header, Footer {
+  Header, Footer, aside, #kontakty, #komentarii {
     border-radius: 5px;
     box-shadow: 0 0 5px dimgray;
     padding: 0.5cm 1cm;
-}
+  }
 
-  header {
+  Header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    grid-column: 1/3;
     border-radius: 5px;
     box-shadow: 0 0 5px dimgray;
     padding: 0.5cm 1cm;
     background-color: #3282b8;
     color: #bbe1fa;
   }
+
   Footer {
-    grid-column: 1/3;
     background-color: #0f4c75;
     color: #bbe1fa;
+  }
+
+  #sectionKatalog {
+    overflow-y: auto;
+  }
+
+  #sectionGalereya {
+    display: none;
+  }
+
+  #sectionKontakty {
+    padding: 5px;
+    display: none;
+    overflow-y: auto;
   }
 </style>
