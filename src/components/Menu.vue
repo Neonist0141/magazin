@@ -25,22 +25,30 @@ export default {
   methods: {
     functionKakayato(item) {
       switch (item) {
+        case "О нас":
+          document.getElementById("sectionGalereya").style.display = null;
+          document.getElementById("sectionKatalog").style.display = 'none';
+          document.getElementById("sectionKontakty").style.display = null;
+          document.getElementById("sectionOKompanii").style.display = 'block';
+          break;
         case "Галерея":
           document.getElementById("sectionGalereya").style.display = "block";
           document.getElementById("sectionKatalog").style.display = "none";
           document.getElementById("sectionKontakty").style.display = null;
+          document.getElementById("sectionOKompanii").style.display = null;
           break;
         case "Контакты":
           document.getElementById("sectionGalereya").style.display = null;
           document.getElementById("sectionKatalog").style.display = "none";
           document.getElementById("sectionKontakty").style.display = "block";
+          document.getElementById("sectionOKompanii").style.display = null;
           break;
         case "Каталог":
           document.getElementById("sectionGalereya").style.display = null;
           document.getElementById("sectionKatalog").style.display = null;
           document.getElementById("sectionKontakty").style.display = null;
+          document.getElementById("sectionOKompanii").style.display = null;
           break;
-        
         default:
           break;
       }

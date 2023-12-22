@@ -5,7 +5,8 @@
   <Katalog id="sectionKatalog"/>
   <Galereya id="sectionGalereya"/>
   <Kontakty id="sectionKontakty"/>
-  <Footer id="footer" />
+  <OKompanii id="sectionOKompanii"/>
+  <Footer id="footer"/>
 </template>
 
 <script>
@@ -14,6 +15,7 @@ import Footer from './components/Footer.vue';
 import Katalog from './components/section/Katalog.vue';
 import Galereya from './components/section/Galereya.vue';
 import Kontakty from './components/section/Kontakty.vue';
+import OKompanii from './components/section/OKompanii.vue';
 
 export default {
   name: 'App',
@@ -22,13 +24,14 @@ export default {
     Katalog,
     Galereya,
     Kontakty,
+    OKompanii,
     Footer
   }
 };
 </script>
 
 <style>
-  Header, Footer, aside, #kontakty, #komentarii {
+  Header, Footer, #kontakty, #komentarii {
     border-radius: 5px;
     box-shadow: 0 0 5px dimgray;
     padding: 0.5cm 1cm;
@@ -61,6 +64,12 @@ export default {
   #sectionKontakty {
     padding: 5px;
     display: none;
+    overflow-y: auto;
+  }
+
+  #sectionOKompanii {
+    display: none;
+    padding: 5px;
     overflow-y: auto;
   }
 </style>
